@@ -7,7 +7,7 @@
     - A kitty have gender derived from on DNA
     - Kitty owner can choose two kitties with opposite gender to breed a new kitten
     - New kitten should inherits the DNA from parents
----
+
 # Assignment Four (4)
 
 1.Finish the implementation
@@ -18,6 +18,7 @@
 2. Design transfer feature for pallet-kitties
 3. Requirements:
     - Kitty owner should be able to transfer a kitty to someone else
+
 ---
 
 # Substrate Node Template

@@ -29,6 +29,8 @@ pub use sp_runtime::BuildStorage;
 pub use pallet_timestamp::Call as TimestampCall;
 pub use pallet_balances::Call as BalancesCall;
 pub use sp_runtime::{Permill, Perbill};
+
+//Runtime 	is assembled with another Macro: construct_runtime
 pub use frame_support::{
 	construct_runtime, parameter_types, StorageValue,
 	traits::{KeyOwnerProofSystem, Randomness},
@@ -101,6 +103,7 @@ pub const VERSION: RuntimeVersion = RuntimeVersion {
 	transaction_version: 1,
 };
 
+//Block time, for default is 6000 (6 seconds)
 pub const MILLISECS_PER_BLOCK: u64 = 2000;
 
 pub const SLOT_DURATION: u64 = MILLISECS_PER_BLOCK;
@@ -265,12 +268,13 @@ impl pallet_sudo::Trait for Runtime {
 impl pallet_template::Trait for Runtime {
 	type Event = Event;
 }
-
+// so we need to make sure that Runtime struct implements all the differents Traits for each pallet
 impl pallet_kitties::Trait for Runtime {
 	type Event = Event;
 }
 
 // Create the runtime by composing the FRAME pallets that were previously configured.
+// Macro
 construct_runtime!(
 	pub enum Runtime where
 		Block = Block,
@@ -287,7 +291,7 @@ construct_runtime!(
 		Sudo: pallet_sudo::{Module, Call, Config<T>, Storage, Event<T>},
 		// Include the custom logic from the template pallet in the runtime.
 		TemplateModule: pallet_template::{Module, Call, Storage, Event<T>},
-		// Substrate Kitties module
+		// Substrate Kitties module, each line is a new pallet. Adding into the runtime.
 		Kitties: pallet_kitties::{Module, Storage, Call, Event<T>},
 	}
 );

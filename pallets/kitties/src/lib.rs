@@ -1,19 +1,18 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
 use codec::{Encode, Decode};
-use frame_support::{
-	decl_module, decl_storage, decl_event, decl_error, StorageValue, StorageDoubleMap,
-	traits::Randomness, RuntimeDebug,
-};
+
+use frame_support::{decl_module, decl_storage, decl_event, decl_error, StorageValue, StorageDoubleMap,
+	traits::Randomness, RuntimeDebug};
+
 use sp_io::hashing::blake2_128;
+
 use frame_system::ensure_signed;
 
 #[derive(Encode, Decode, Clone, RuntimeDebug, PartialEq, Eq)]
 pub struct Kitty(pub [u8; 16]);
 
-pub trait Trait: frame_system::Trait {
-	type Event: From<Event<Self>> + Into<<Self as frame_system::Trait>::Event>;
-}
+pub trait Trait: frame_system::Trait {type Event: From<Event<Self>> + Into<<Self as frame_system::Trait>::Event>;}
 
 decl_storage! {
 	trait Store for Module<T: Trait> as Kitties {

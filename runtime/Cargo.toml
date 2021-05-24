@@ -1,5 +1,5 @@
 [package]
-authors = ['Substrate DevHub <https://github.com/substrate-developer-hub>']
+authors = ['Leandro Jareño']
 edition = '2018'
 homepage = 'https://substrate.dev'
 license = 'Unlicense'
@@ -26,6 +26,7 @@ serde = { features = ['derive'], optional = true, version = '1.0.119' }
 
 # local dependencies
 pallet-template = { path = '../pallets/template', default-features = false, version = '2.0.1' }
+# Add dependency for load the Kitties pallet by providing the source to the pallet, and bellow std enabled ***
 pallet-kitties = { path = '../pallets/kitties', default-features = false }
 
 # Substrate dependencies
@@ -94,5 +95,6 @@ std = [
     'sp-std/std',
     'sp-transaction-pool/std',
     'sp-version/std',
+    # Also adding std enabled for Kitties pallet
     'pallet-kitties/std',
 ]

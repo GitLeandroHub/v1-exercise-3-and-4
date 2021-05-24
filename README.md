@@ -1,4 +1,4 @@
-# Assignment Three
+# Assignment Three (3)
 
 1. Finish the implementation
     - [./pallets/kitties/src/lib.rs#L53](./pallets/kitties/src/lib.rs#L53)
@@ -7,6 +7,18 @@
     - A kitty have gender derived from on DNA
     - Kitty owner can choose two kitties with opposite gender to breed a new kitten
     - New kitten should inherits the DNA from parents
+---
+# Assignment Four (4)
+
+1.Finish the implementation
+    - ./pallets/kitties/src/lib.rs
+    - Refactor fn create
+    - Finish fn combine_dna
+    - Finish fn random_value
+2. Design transfer feature for pallet-kitties
+3. Requirements:
+    - Kitty owner should be able to transfer a kitty to someone else
+
 ---
 
 # Substrate Node Template

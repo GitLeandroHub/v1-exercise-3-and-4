@@ -10,11 +10,11 @@
 
 # Assignment Four (4)
 
-1.Finish the implementation
-    - ./pallets/kitties/src/lib.rs    
-    - Refactor fn create
-    - Finish fn combine_dna
-    - Finish fn random_value
+1. Finish the implementation
+    - [./pallets/kitties/src/lib.rs](./pallets/kitties/src/lib.rs)
+    - Refactor `fn create`
+    - Finish `fn combine_dna`
+    - Finish `fn random_value`
 2. Design transfer feature for pallet-kitties
 3. Requirements:
     - Kitty owner should be able to transfer a kitty to someone else

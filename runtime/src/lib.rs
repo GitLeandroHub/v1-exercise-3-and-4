@@ -271,6 +271,8 @@ impl pallet_template::Trait for Runtime {
 // so we need to make sure that Runtime struct implements all the differents Traits for each pallet
 impl pallet_kitties::Trait for Runtime {
 	type Event = Event;
+	//`Randomness` in implementation
+	type Randomness = RandomnessCollectiveFlip;
 }
 
 // Create the runtime by composing the FRAME pallets that were previously configured.

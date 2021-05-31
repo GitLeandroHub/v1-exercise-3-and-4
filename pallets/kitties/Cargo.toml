@@ -9,9 +9,16 @@ codec = { package = "parity-scale-codec", version = "1.3.4", default-features = 
 
 frame-support = { version = "2.0.1", default-features = false }
 frame-system = { version = "2.0.1", default-features = false }
-sp-io = { version = "2.0.1", default-features = false }
-pallet-randomness-collective-flip = { version = "2.0.1", default-features = false }
 
+#Adding some depedencies for the kitties pallets
+#io stuff like hashing 
+sp-io = { version = "2.0.1", default-features = false }
+#not really secure, but ok for kitties learning purpose
+pallet-randomness-collective-flip = { version = "2.0.1", default-features = false }
+sp-std = { version = "2.0.1", default-features = false }
+
+
+#add dependecies bellow too
 [features]
 default = ["std"]
 std = [
@@ -19,5 +26,6 @@ std = [
     "frame-support/std",
     "frame-system/std",
     "sp-io/std",
+    "sp-std/std",
     "pallet-randomness-collective-flip/std",
 ]

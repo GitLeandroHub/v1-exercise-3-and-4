@@ -11,4 +11,4 @@ Uploading exercise (Assignment) 3 and 4
 
 Follow link to assignments resolution:
 
-- [./submission/README.md](./submission/README.md)
+- [./submission/README.md](./README.md)

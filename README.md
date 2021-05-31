@@ -21,6 +21,12 @@
 
 ---
 
+Follow link to assignments resolution:
+
+- [./submission/README.md](./submission/README.md)
+
+
+
 # Substrate Node Template
 
 A fresh FRAME-based [Substrate](https://www.substrate.io/) node, ready for hacking :rocket:
